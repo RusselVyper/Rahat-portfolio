@@ -2,6 +2,9 @@
 <!doctype html>
 <html lang="en">
   <head>
+    
+    {% load static %}
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -47,7 +50,7 @@
   <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Rahat</a>
+            <a class="navbar-brand" href="{% url 'home' %}">Rahat</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -58,10 +61,10 @@
                   <a class="nav-link" href="#">Artworks<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Short Films</a>
+                  <a class="nav-link" href="{% url 'movies' %}">Short Films</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Writings</a>
+                  <a class="nav-link" href="{% url 'writings' %}">Writings</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">About</a>
@@ -82,6 +85,8 @@
     <div class="container">
       <h1>Ashikul Islam Rahat</h1>
       <p class="lead text-muted">Painter, Writer & Film Maker</p>
+
+      <img src="{% static 'rahat.jpg' %}" alt="Self Photo" height=300>
       <p>
         <a href="#" class="btn btn-primary my-2">Contact</a>
         
